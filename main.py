@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route("/")
 def home():
      return "Welcome <br> <a href=./create>create db</a> <br> <a href=http://localhost:8080/data?well=34059242540000>test sample for http://localhost:8080/data?well=34059242540000</a>  <br> <br><form action=./data?well=data> <input type=text name=well placeholder=data required /> <br><br> <input type=submit value=submit></form>"
-#comment
+
 
 @app.route("/create")
 def create():
@@ -29,7 +29,7 @@ def create():
         cursor.execute("INSERT INTO production VALUES (?, ?, ?, ?)",
                     (row.name, row["OIL"], row["GAS"], row["BRINE"]))
 
-    # Commit the changes and close the connection
+    # connection close
     connection.commit()
     connection.close()
     return "db created   <br> <a href=http://localhost:8080/data?well=34059242540000>test sample for http://localhost:8080/data?well=34059242540000</a>  <br> <br><form action=./data?well=data> <input type=text name=well placeholder=data required /> <br><br> <input type=submit value=submit></form>"
