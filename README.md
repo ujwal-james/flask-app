@@ -1,2 +1,2 @@
 # flask-app
-#created for random exp
+#requirments=> flask,pandas,sqlite3,xlrd

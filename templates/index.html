@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} page</title>
+</head>
+<body>
+   <p> {{title}}</p> 
+
+   {% if title=="Welcome" %}
+   <a href="./create">create db</a> <br> 
+
+   {% endif %}
+   
+
+     <br> <a href="http://localhost:8080/data?well=34059242540000">test sample for http://localhost:8080/data?well=34059242540000</a> 
+      <br> <br>
+      <form action="./data?well=data"> 
+        <input type=text name=well placeholder=data required /> <br>
+        <br> <input type=submit value=submit>
+    </form>
+    {% if title=="Db Created" %}
+   <a href="/">go back</a> <br> 
+   
+   {% endif %}
+</body>
+</html>
